@@ -14,6 +14,14 @@
 
 // CODE HERE...
 
+let callBinding = (arr, func, num) => {
+    for (let i = 0; i<arr.length; i++){
+        if (num = arr[i].id) {
+            return func('Trogdor')
+        }
+    }
+}
+
 
 
 // *************
@@ -29,6 +37,12 @@
 
 // CODE HERE...
 
+let applyBinding = (arr, func, num) => {
+    for (var i=0; i<arr.length; i++){
+        
+    }
+return func();
+}
 
 
 // *************
@@ -49,6 +63,9 @@ var foo;
 
 // CODE HERE...
 
+let promiseMe = (obj) => {
+    setTimeout(function(){let foo = "bar"}, 20)
+}
 
 
 // *************
@@ -64,3 +81,14 @@ var foo;
 // and then resolve the array as you complete your promise.
 
 // CODE HERE...
+
+let emailList = (prom, req) => {
+    
+}
+
+
+
+//$http({
+//     method: "GET",
+//     url: "/api/users"
+//   })
