@@ -44,14 +44,15 @@ function noWeakLink() {
       url: "/api/users"
     })
       // CODE HERE...
-      .then(res => {
-        firstUser = res[0];
+      .then((res) =>{
+        firstUser = res.data[0];
+        return res;
       })
-      .then(res => {
-        thirdUser = res[9];
+      .then((res) =>{
+        thirdUser = res.data[2];
+        return res.data[9];
       })
-  );
-}
+    )}
 
 // *************
 // * PROBLEM 2 *
@@ -77,7 +78,8 @@ function large() {
   return "My name is " + this.name + " and I am very heavy!";
 }
 // CODE HERE...
-let boundToElephant = large.bind(this.elephant);
+let boundToElephant = large.bind(elephant);
+
 // *************
 // * PROBLEM 3 *
 // *************
@@ -107,11 +109,9 @@ return bound;
 // CODE HERE...
 
 function accountingOffice (assets) {
-   let
-    accountant = function (liabilities){
+  return function (liabilities){
     return assets + liabilities;
   }
-  return accountant();
 }
 
 // *************
